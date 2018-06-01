@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<head>
+<title>Trade Routine Checklist</title>
+    
+    <link rel="stylesheet" type="text/css" href="C:\Users\Brian Pilling\Desktop\MF Trade Routine\MF Trade Routine.css">
+
+</head>
+
+<body id="body" bgcolor="beige">
+
+<form>
+
+<table id="knowAccountTable" border="0" align="center" width="95%" height="" cellpadding="0" cellspacing="3">
+	<tr id="knowAcctTitleRow" height="50px">
+		<td id="knowAcctTitleCell" width="" colspan="4">
+			<h2 id="knowTheAccount" style="color:green;">Know The Account:</h2>
+		</td>
+	</tr>
+	<tr id="knowAcctRow">
+		<td id="knowAcctCell1" width="50%" colspan="2">
+			<input type="checkbox" id="acctNumber" name="Account Number" value="" onclick="makeElementGreen('acctNumber', 'acctNumberText', 'acctNumberImage', 'knowAccountTable');"/> <a id="acctNumberText">Account Number.</a><img src="images/check-mark.png" id="acctNumberImage" width="14" height="16" style="visibility:hidden;"></br>
+			<input type="checkbox" id="stateReg" name="State Registration" value="" onclick="makeElementGreen('stateReg', 'stateRegText', 'stateRegImage', 'knowAccountTable');"/> <a id="stateRegText">Registered in their State.</a><img src="images/check-mark.png" id="stateRegImage" width="14" height="16" style="visibility:hidden;"></br>
+			<input type="checkbox" id="phoneNumber" name="Phone Number" value="" onclick="makeElementGreen('phoneNumber', 'phoneNumberText', 'phoneNumberImage', 'knowAccountTable');"/> <a id="phoneNumberText">Caller's Phone Number. <input type="tel" id="phoneNumberTxt" name="Phone Number Text" value="" maxlength="14" size="10" placeholder="123-456-7890" onkeyup="phoneNumberChecker();" /></a><img src="images/check-mark.png" id="phoneNumberImage" width="14" height="16" style="visibility:hidden;"></br>
+			<input type="checkbox" id="stateCalling" name="State Calling" value="" onclick="makeElementGreen('stateCalling', 'stateCallingText', 'stateCallingImage', 'knowAccountTable');"/> <a id="stateCallingText">What State are they Calling from. <input type="text" id="stateCallingTxt" name="State Calling Text" value="" maxlength="5" size="5" placeholder="UT" onkeyup="stateCallingChecker();" /></a><img src="images/check-mark.png" id="stateCallingImage" width="14" height="16" style="visibility:hidden;"></br>
+		</td>
+		<td id="knowAcctCell2" width="50%" colspan="2">
+			<input type="checkbox" id="alertsPanel" name="Alerts Panel" value="" onclick="makeElementGreen('alertsPanel', 'alertsPanelText', 'alertsPanelImage', 'knowAccountTable');" /> <a id="alertsPanelText">Check Alerts & Restrictions Panel.</a><img src="images/check-mark.png" id="alertsPanelImage" width="14" height="16" style="visibility:hidden;"></br>
+			<input type="checkbox" id="ordersTab" name="Orders Tab" value="" onclick="makeElementGreen('ordersTab', 'ordersTabText', 'ordersTabImage', 'knowAccountTable');" /> <a id="ordersTabText">Orders Tab - Any Open or Cancelled Orders.</a><img src="images/check-mark.png" id="ordersTabImage" width="14" height="16" style="visibility:hidden;"></br>
+			<input type="checkbox" id="detailsTab" name="Details Tab" value="" onclick="makeElementGreen('detailsTab', 'detailsTabText', 'detailsTabImage', 'knowAccountTable');" /> <a id="detailsTabText">Details Tab - Auto Investments or PWS.</a><img src="images/check-mark.png" id="detailsTabImage" width="14" height="16" style="visibility:hidden;"></br>
+		</td>
+	</tr>
+</table>
+
+<table id="knowTradeTable" border="0" align="center" width="95%" height="" cellpadding="5" cellspacing="3" style="">
+	<tr id="knowTradeTitleRow1" height="50px">
+		<td id="knowTradeTitleCell" width="" colspan="4">
+			<h2 id="knowTheTrade" style="color:green;">Know The Trade: <a id="knowTradeInfo" style="size:8px;font-face:arial;">What is the Client's Intent? Can the account support it?</a></h2>
+		</td>
+	</tr>
+	<tr id="knowTradeTitleRow2" height="25px" align="center" style="background-color:blue;color:white;font-face:arial;font-weight:bold;">
+		<td id="knowTradeTitleCell1" width="25%">
+			<a id="knowTheTrade" height="10px">ACTION</a>
+		</td>
+		<td id="knowTradeTitleCell2" width="25%">
+			<a id="knowTheTrade" height="10px">AMOUNT</a>
+		</td>
+		<td id="knowTradeTitleCell3" width="25%">
+			<a id="knowTheTrade" height="10px">ASSET</a>
+		</td>
+		<td id="knowTradeTitleCell4" width="25%">
+			<a id="knowTheTrade" height="10px">AIM</a>
+		</td>
+	</tr>
+	<tr id="knowTradeRow1">
+		<td id="knowTradeCell1" width="25%" align="center">
+			<input type="radio" id="buy" name="Order Type" value="" onclick="makeElementGreen('buy', 'buyText', 'buyImage', 'knowTradeTable');" /> <a id="buyText">Buy</a><img src="images/check-mark.png" id="buyImage" width="14" height="16" style="visibility:hidden;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="radio" id="sell" name="Order Type" value="" onclick="makeElementGreen('sell', 'sellText', 'sellImage', 'knowTradeTable');" /> <a id="sellText">Sell</a><img src="images/check-mark.png" id="sellImage" width="14" height="16" style="visibility:hidden;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="radio" id="exchange" name="Order Type" value="" onclick="makeElementGreen('exchange', 'exchangeText', 'exchangeImage', 'knowTradeTable');" /> <a id="exchangeText">Exchange</a><img src="images/check-mark.png" id="exchangeImage" width="14" height="16" style="visibility:hidden;"> </br>
+			<input type="radio" id="sellToBuy" name="Order Type" value="" onclick="makeElementGreen('sellToBuy', 'sellToBuyText', 'sellToBuyImage', 'knowTradeTable');" /> <a id="sellToBuyText"> Sell to Buy <a style="color:red;font-weight:bold;">(If Appropriate)</a></a><img src="images/check-mark.png" id="sellToBuyImage" width="14" height="16" style="visibility:hidden;">
+		</td>
+		<td id="knowTradeCell2" width="25%" height="50px" align="center">	
+			<a id="dollarAmt" style="font-weight:bold;"></a><input type="number" id="dollarOrShare" name="Dollars or Shares" value="" /> <a id="shareQty" style="color:red;font-weight:bold;"></a></br>
+			<input type="radio" id="dollars" onClick="showDollarShares();" name="Amount Type" value="Dollars" /> Dollars &nbsp;
+			<input type="radio" id="shares" onClick="showDollarShares();" name="Amount Type" value="Shares" /> Shares
+		</td>
+		<td id="knowTradeCell3" width="25%">
+			
+		</td>
+		<td id="knowTradeCell4" width="25%">
+			
+		</td>
+	</tr>
+	<tr id="knowTradeRow2">
+		<td id="knowTradeCell5" width="50%" colspan="2">
+			<input type="checkbox" id="quote" name="Quote" value="" onclick="makeElementGreen('quote', 'quoteText', 'quoteImage', 'knowTradeTable');" /> <a id="quoteText">Provide Quote</a> <img src="images/check-mark.png" id="quoteImage" width="14" height="16" style="visibility:hidden;"> </br>
+			<input type="checkbox" id="solicitation" name="Solicitation" value="" onclick="makeElementGreen('solicitation', 'solicitationText', 'solicitationImage', 'knowTradeTable');" /> <a id="solicitationText">Confirm Solicited/Unsolicited</a> <img src="images/check-mark.png" id="solicitationImage" width="14" height="16" style="visibility:hidden;">
+		</td>
+		<td id="knowTradeCell6" width="50%" colspan="2">
+			<input type="checkbox" id="checkBalances" name="Check Balances" value="" onclick="makeElementGreen('checkBalances', 'checkBalancesText', 'checkBalancesImage', 'knowTradeTable');" /> <a id="checkBalancesText"><b>Check Balances</b></a> <img src="images/check-mark.png" id="checkBalancesImage" width="14" height="16" style="visibility:hidden;"> </br>
+			<input type="checkbox" id="taxWithholding" name="Tax Withholding" value="" onclick="makeElementGreen('taxWithholding', 'taxWithholdingText', 'taxWithholdingImage', 'knowTradeTable');" /> <a id="taxWithholdingText">Confirm Tax Withholding (Retirement Distributions)</a> <img src="images/check-mark.png" id="taxWithholdingImage" width="14" height="16" style="visibility:hidden;">
+		</td>
+	</tr>
+</table>
+
+<table id="knowSecurityTable" border="0" align="center" width="95%" height="" cellpadding="" cellspacing="" style="">
+	<tr id="knowSecurityTitleRow">
+		<td id="knowSecurityTitleCell" colspan="3">
+			<h2 id="knowTheSecurity" style="color:green;">Know The Security:</h2>
+		</td>
+	</tr>
+	<tr id="knowSecurityTitleRow" height="25px" align="center" style="background-color:blue;color:white;font-face:arial;font-weight:bold;">
+		<td id="knowSecurityTitleCell" colspan="2">
+			<a id="knowTheSecurity">ALL FUNDS</a>
+		</td>
+	</tr>
+	<tr id="knowSecurityRow1">
+		<td id="knowSecurityCell1" colspan="2">
+			<input type="checkbox" id="settleDaysLastTrade" name="Settle Days and Last Trade" value="" /> Settlement Days & Last Trade </br>
+			<input type="checkbox" id="shortTermRedemptions" name="Short Term Redemptions" value="" /> Short-Term Redemption Period & Fees </br>
+			<input type="checkbox" id="restrictions" name="Restrictions" value="" /> Restrictions (All must be Green) </br>
+			<input type="checkbox" id="Misc" name="Misc" value="" /> Misc. </br>
+			<input type="checkbox" id="minimums" name="Minimums" value="" /> Minimums (Initial & Additional) </br>
+			<input type="checkbox" id="smallBalanceFee" name="Small Balance Fee" value="" /> Disclose Small Balance Fee (Fidelity Funds Only - Check for Waivers)
+			</br>
+		</td>
+	</tr>
+	<tr id="knowSecurityNonFidelityTitleRow" align="center" style="height:25px;background-color:blue;color:white;font-face:arial;font-weight:bold;">
+		<td id="knowSecurityNonFidelityTitleCell" colspan="3" style="">
+			<a id="knowSecurityNonFidelityFund" style="">NON-FIDELITY FUNDS</a>
+		</td>
+	</tr>
+	<tr id="knowSecurityNonFidelityRow1" height="25px" align="center" style="background-color:black;color:white;font-face:arial;font-weight:bold;rowheight:10px;">
+		<td id="knowSecurityNonFidelityCell1" width="33%">
+			<a id="knowSecurityNonFidelityLoad">Load?</a>
+		</td>
+		<td id="knowSecurityNonFidelityCell2" width="33%">
+			<a id="knowSecurityNonFidelityNTFY">NTF = Y</a>
+		</td>
+		<td id="knowSecurityNonFidelityCell3" width="34%">
+			<a id="knowSecurityNonFidelityNTFN">NTF = N</a>
+		</td>
+	</tr>
+	<tr id="knowSecurityNonFidelityRow1" height="" align="" style="">
+		<td id="knowSecurityNonFidelityCell1">
+			<input type="radio" id="checkIfLoadedNo" name="Loads" value="No">
+				<a id="noLoad" style="font-weight:bold;">No: </a>
+				<a id="">Check NTF Indicator</a></br>
+			<input type="radio" id="checkIfLoadedYes" name="Loads" value="Yes">
+				<a id="" style="font-weight:bold;">Yes: </a>
+				<a id="">Transfer to Specialty Trading</a></br> (Except We CAN Sell Class A Shares)
+		</td>
+		<td id="knowSecurityNonFidelityCell2">
+			<a id="" style="font-face:arial;font-weight:bold;size:10px;">Fidelity Short-Term Trading Fee</a> </br>
+			<input type="radio" id="buyNTF" name="NTF" value="Buy">
+				<a id="" style="font-weight:bold;">Buy: </a>
+				<a id="">No Fee</a></br>
+			<input type="radio" id="sellNTF" name="NTF" value="Sell">
+				<a id="" style="font-weight:bold;">Sell: </a>
+				<a id="">Charged</a> (Only if Short-Term)
+		</td>
+		<td id="knowSecurityNonFidelityCell3">
+			<a id="" style="font-face:arial;font-weight:bold;size:10px;">Transaction Fee</a> </br>
+			<input type="radio" id="transactionFeeBuy" name="Transaction Fee" value="Buy">
+				<a id="" style="font-weight:bold;">Buy: </a>
+				<a id="">Charged</a> <a style="color:red;font-weight:bold;">DO NOT OVERBUY - ALWAYS Comes From Core)</a></br>
+			<input type="radio" id="transactionFeeSell" name="Transaction Fee" value="Sell">
+				<a id="" style="font-weight:bold;">Sell: </a>
+				<a id="">Charged</a> (Only if Short-Term)
+		</td>
+	</tr>	
+</table>
+
+<table id="executeOrderTable" border="0" align="center" width="95%" height="" cellpadding="3" cellspacing="3" style="">
+	<tr id="">
+		<td id="">
+			<h2 id="executeOrder" style="color:green;">Execute the Order:</h2>
+		</td>
+	</tr>
+	<tr id="">
+		<td id="">
+			<input type="checkbox" id="enterOrderRWOE" name="Execute Order" value="Enter Order in RWOE"> Enter order in RWOE </br>
+			<input type="checkbox" id="headlineProvideFeedback" name="Execute Order" value="Headline Provide Feedback"> Headline and Provide Feedback </br>
+			<input type="checkbox" id="checkOrderReview" name="Execute Order" value="Check Order Review"> Check Order Review </br>
+			<input type="checkbox" id="reviewOrderLog" name="Execute Order" value="Review Update Order Log"> Closely review & update Order Log </br>
+			<input type="checkbox" id="processDistribution" name="Execute Order" value="Execute Order"> <a id="" style="font-weight:bold;">Process Distribution, </a>if applicable (Compare Gross Amount with Balances & Open Orders) </br>
+			<input type="checkbox" id="summarizeNextSteps" name="Execute Order" value="Summarize and Next Steps"> Summarize Call & Next Steps </br>
+			<input type="checkbox" id="siebelNotes" name="Execute Order" value="Enter Siebel Notes"> Enter Siebel CRM Notes
+		</td>
+	</tr>
+</table>
+
+</form>
+
+</br>
+</br>
+</br>
+</br>
+</br>
+    
+<script src="C:\Users\Brian Pilling\Desktop\MF Trade Routine\MF Trade Routine.js"></script>
+
+</body>
+</html>
